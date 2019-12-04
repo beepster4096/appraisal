@@ -1,5 +1,6 @@
 package drmeepster.appraisal.mixin;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -31,22 +32,20 @@ public abstract class ItemMixin implements AppraisalItem{
 	private void onAppendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context,
 		CallbackInfo callback){
 
-		Text appraisal = getAppraisal(stack, world, tooltip, context);
-		
-		if(appraisal != null){
-			tooltip.add(appraisal);
-		}
+		tooltip.addAll(getAppraisal(stack, world, tooltip, context));
 	}
 
 	@Override
-	public Text getAppraisal(ItemStack stack, World world, List<Text> tooltip, TooltipContext context){
+	public List<Text> getAppraisal(ItemStack stack, World world, List<Text> tooltip, TooltipContext context){
 		String key = this.getAppraisalTranslationKey(stack);
 		
-		if(Language.getInstance().hasTranslation(key)){
-			return new TranslatableText(key).setStyle(this.getAppraisalStyle());
-		}else{
-			return null;
+		List<Text> out = new ArrayList<>();
+		
+		for(int i = 0; Language.getInstance().hasTranslation(key + i); i++){
+			out.add(new TranslatableText(key + i).setStyle(this.getAppraisalStyle()));
 		}
+		
+		return out;
 	}
 
 	@Override
@@ -54,7 +53,7 @@ public abstract class ItemMixin implements AppraisalItem{
 		if(this.appraisalTranslationKey == null){
 			// Class#cast used to avoid compile error
 			this.appraisalTranslationKey = SystemUtil.createTranslationKey("appraisal",
-				Registry.ITEM.getId(Item.class.cast(this)));
+				Registry.ITEM.getId(Item.class.cast(this))) + ".";
 		}
 
 		return appraisalTranslationKey;

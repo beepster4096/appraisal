@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 public interface AppraisalItem{
 
-	public Text getAppraisal(ItemStack stack, World world, List<Text> tooltip, TooltipContext context);
+	public List<Text> getAppraisal(ItemStack stack, World world, List<Text> tooltip, TooltipContext context);
 
 	public String getAppraisalTranslationKey(ItemStack stack);
 	
