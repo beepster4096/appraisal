@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "appraisal",
+	"version": "${version}",
+	"name": "Appraisal",
+	"description": "Lore for every item!",
+	"authors": [
+		"DrMeepster"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/DrMeepster/appraisal"
+	},
+	"license": "MIT",
+	"icon": "assets/appraisal/icon.png",
+	"environment": "*",
+	"entrypoints": {
+	},
+	"mixins": [
+		"appraisal.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.4.0",
+		"fabric": "*"
+	},
+	"custom": {
+		"modmenu:clientsideOnly": true
+	}
+}
