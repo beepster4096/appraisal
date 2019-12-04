@@ -1,9 +1,10 @@
-package drmeepster.appraisal.interfaces;
+package drmeepster.appraisal.lib;
 
 import java.util.List;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
@@ -13,5 +14,9 @@ public interface AppraisalItem{
 
 	public String getAppraisalTranslationKey(ItemStack stack);
 	
-	public void setAppraisalTranslationKey(String string);
+	public void setAppraisalTranslationKey(String newKey);
+	
+	public Style getAppraisalStyle();
+
+	public void setAppraisalStyle(Style appraisalStyle);
 }
