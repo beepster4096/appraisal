@@ -1,4 +1,4 @@
-# Appraisal ᵇᵉᵗᵃ
+# Appraisal ᵃˡᵖʰᵃ
 
 Goal: Lore for all Minecraft items. You can help, too! 
 
