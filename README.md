@@ -1,3 +1,5 @@
 # Appraisal ᵇᵉᵗᵃ
 
-Goal: Lore for all Minecraft items. You can help, too! (But wait until the base code works)
+Goal: Lore for all Minecraft items. You can help, too! 
+
+[Contribution guide](https://github.com/DrMeepster/appraisal/wiki/Contribution-Guide)
