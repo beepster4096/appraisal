@@ -1,17 +1,109 @@
 {
-	"appraisal.minecraft.stone.0": "Solid rock.",
-	"appraisal.minecraft.stone.1": "The building block of the Earth's crust.",
-	"appraisal.minecraft.granite.0": "Igneous rock.",
-	"appraisal.minecraft.granite.1": "Made from course grains of hardened magma.",
-	"appraisal.minecraft.polished_granite.0": "Shiny rock.",
-	"appraisal.minecraft.polished_granite.1": "Perfect for kitchen countertops.",
-	"appraisal.minecraft.diorite.0": "Igneous rock.",
-	"appraisal.minecraft.diorite.1": "Hard and easy to polish.",
-	"appraisal.minecraft.polished_diorite.0": "Shiny rock.",
-	"appraisal.minecraft.polished_diorite.1": "Historically used for pavement and carving.",
-	"appraisal.minecraft.andesite.0": "Igenous rock.",
-	"appraisal.minecraft.andesite.1": "Perfect for adding variation to any stone build.",
-	"appraisal.minecraft.polished_andesite.0": "Shiny rock.",
-	"appraisal.minecraft.polished_andesite.1": "Perfect for adding variation to any stone build.",
-	"appraisal.minecraft..": ""
+	"appraisal.block.minecraft..": "",
+	
+	"appraisal.block.minecraft.stone.0": "Solid rock.",
+	"appraisal.block.minecraft.stone.1": "The building block of the Earth's crust.",
+	"appraisal.block.minecraft.stone_slab.0": "Solid rock.",
+	"appraisal.block.minecraft.stone_slab.1": "The building block of the Earth's crust.",
+	
+	"appraisal.block.minecraft.cobblestone.0": "Shattered rock.",
+	"appraisal.block.minecraft.cobblestone.1": "A good material, perfect for any purpose.",
+	"appraisal.block.minecraft.cobblestone_slab.0": "Shattered rock.",
+	"appraisal.block.minecraft.cobblestone_slab.1": "A good material, perfect for any purpose.",
+	"appraisal.block.minecraft.cobblestone_wall.0": "Shattered rock.",
+	"appraisal.block.minecraft.cobblestone_wall.1": "A good material, perfect for any purpose.",
+	
+	"appraisal.block.minecraft.mossy_cobblestone.0": "Lifeful rock.",
+	"appraisal.block.minecraft.mossy_cobblestone.1": "Moss is seeping through the cracks.",
+	"appraisal.block.minecraft.mossy_cobblestone_slab.0": "Lifeful rock.",
+	"appraisal.block.minecraft.mossy_cobblestone_slab.1": "Moss is seeping through the cracks.",
+	"appraisal.block.minecraft.mossy_cobblestone_wall.0": "Lifeful rock.",
+	"appraisal.block.minecraft.mossy_cobblestone_wall.1": "Moss is seeping through the cracks.",
+	
+	"appraisal.block.minecraft.granite.0": "Igneous rock.",
+	"appraisal.block.minecraft.granite.1": "Made from course grains of hardened magma.",
+	"appraisal.block.minecraft.granite_slab.0": "Igneous rock.",
+	"appraisal.block.minecraft.granite_slab.1": "Made from course grains of hardened magma.",
+	"appraisal.block.minecraft.granite_wall.0": "Igneous rock.",
+	"appraisal.block.minecraft.granite_wall.1": "Made from course grains of hardened magma.",
+	
+	"appraisal.block.minecraft.polished_granite.0": "Shiny rock.",
+	"appraisal.block.minecraft.polished_granite.1": "Perfect for kitchen countertops.",
+	"appraisal.block.minecraft.polished_granite_slab.0": "Shiny rock.",
+	"appraisal.block.minecraft.polished_granite_slab.1": "Perfect for kitchen countertops.",
+	
+	"appraisal.block.minecraft.diorite.0": "Igneous rock.",
+	"appraisal.block.minecraft.diorite.1": "Hard and easy to polish.",
+	"appraisal.block.minecraft.diorite_slab.0": "Igneous rock.",
+	"appraisal.block.minecraft.diorite_slab.1": "Hard and easy to polish.",
+	"appraisal.block.minecraft.diorite_wall.0": "Igneous rock.",
+	"appraisal.block.minecraft.diorite_wall.1": "Hard and easy to polish.",
+	
+	"appraisal.block.minecraft.polished_diorite.0": "Shiny rock.",
+	"appraisal.block.minecraft.polished_diorite.1": "Historically used for pavement and carving.",
+	"appraisal.block.minecraft.polished_diorite_slab.0": "Shiny rock.",
+	"appraisal.block.minecraft.polished_diorite_slab.1": "Historically used for pavement and carving.",
+	
+	"appraisal.block.minecraft.andesite.0": "Igenous rock.",
+	"appraisal.block.minecraft.andesite.1": "Perfect for adding variation to any stone build.",
+	"appraisal.block.minecraft.andesite_slab.0": "Igenous rock.",
+	"appraisal.block.minecraft.andesite_slab.1": "Perfect for adding variation to any stone build.",
+	"appraisal.block.minecraft.andesite_wall.0": "Igenous rock.",
+	"appraisal.block.minecraft.andesite_wall.1": "Perfect for adding variation to any stone build.",
+	
+	"appraisal.block.minecraft.polished_andesite.0": "Shiny rock.",
+	"appraisal.block.minecraft.polished_andesite.1": "Perfect for adding variation to any stone build.",
+	"appraisal.block.minecraft.polished_andesite_slab.0": "Shiny rock.",
+	"appraisal.block.minecraft.polished_andesite_slab.1": "Perfect for adding variation to any stone build.",
+	
+	"appraisal.block.minecraft.bedrock.0": "Immortal rock.",
+	"appraisal.block.minecraft.bedrock.1": "The edge of the universe.",
+	
+	"appraisal.block.minecraft.smooth_stone.0": "Smooth rock.",
+	"appraisal.block.minecraft.smooth_stone.1": "Makes for great sidewalk.",
+	"appraisal.block.minecraft.smooth_stone_slab.0": "Smooth rock.",
+	"appraisal.block.minecraft.smooth_stone_slab.1": "Makes for great sidewalk.",
+	
+	"appraisal.block.minecraft.stone_bricks.0": "Stacked bricks.",
+	"appraisal.block.minecraft.stone_bricks.1": "The sturdy material of the stronghold.",
+	"appraisal.block.minecraft.stone_brick_slab.0": "Stacked bricks.",
+	"appraisal.block.minecraft.stone_brick_slab.1": "The sturdy material of the stronghold.",
+	"appraisal.block.minecraft.stone_brick_wall.0": "Stacked bricks.",
+	"appraisal.block.minecraft.stone_brick_wall.1": "The sturdy material of the stronghold.",
+	
+	"appraisal.block.minecraft.mossy_stone_bricks.0": "Lifeful bricks.",
+	"appraisal.block.minecraft.mossy_stone_bricks.1": "Moss is seeping through the cracks.",
+	"appraisal.block.minecraft.mossy_stone_brick_slab.0": "Lifeful bricks.",
+	"appraisal.block.minecraft.mossy_stone_brick_slab.1": "Moss is seeping through the cracks.",
+	"appraisal.block.minecraft.mossy_stone_brick_wall.0": "Lifeful bricks.",
+	"appraisal.block.minecraft.mossy_stone_brick_wall.1": "Moss is seeping through the cracks.",
+	
+	"appraisal.block.minecraft.cracked_stone_bricks.0": "Damaged bricks.",
+	"appraisal.block.minecraft.cracked_stone_bricks.1": "The not quite sturdy material of the stronghold.",
+	
+	"appraisal.block.minecraft.chiseled_stone_bricks.0": "Carved bricks.",
+	"appraisal.block.minecraft.chiseled_stone_bricks.1": "Fancy flair for a boring wall.",
+	
+	"appraisal.item.minecraft.infested_stone.0": "Hollow rock.",
+	"appraisal.item.minecraft.infested_stone.1": "Weakened by the parasite of the stronghold.",
+	
+	"appraisal.item.minecraft.infested_cobblestone.0": "Crumbling rock.",
+	"appraisal.item.minecraft.infested_cobblestone.1": "Weakened by the parasite of the stronghold.",
+	
+	"appraisal.item.minecraft.infested_stone_bricks.0": "Piled bricks.",
+	"appraisal.item.minecraft.infested_stone_bricks.1": "Weakened by the parasite of the stronghold.",
+	
+	"appraisal.item.minecraft.infested_mossy_stone_bricks.0": "Overgrown bricks.",
+	"appraisal.item.minecraft.infested_mossy_stone_bricks.1": "Weakened by the parasite of the stronghold.",
+	
+	"appraisal.item.minecraft.infested_cracked_stone_bricks.0": "Broken bricks.",
+	"appraisal.item.minecraft.infested_cracked_stone_bricks.1": "Weakened by the parasite of the stronghold.",
+	
+	"appraisal.item.minecraft.infested_chiseled_stone_bricks.0": "Scraped bricks.",
+	"appraisal.item.minecraft.infested_chiseled_stone_bricks.1": "Weakened by the parasite of the stronghold.",
+	
+	"appraisal.item.minecraft.gravel.0": "Combined pebbles.",
+	"appraisal.item.minecraft.gravel.1": "Amazing for paths but highly unstable.",
+	
+	"appraisal.none": "(no appraisal)"
 }

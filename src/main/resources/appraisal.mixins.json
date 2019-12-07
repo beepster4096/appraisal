@@ -5,7 +5,11 @@
 	"mixins": [
 	],
 	"client": [
-		"ItemMixin"
+		"ItemMixin",
+		"BlockItemMixin",
+		"BlockMixin",
+		"StairsBlockMixin",
+		"InfestedBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
