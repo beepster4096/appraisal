@@ -105,5 +105,14 @@
 	"appraisal.item.minecraft.gravel.0": "Combined pebbles.",
 	"appraisal.item.minecraft.gravel.1": "Amazing for paths but highly unstable.",
 	
+	"appraisal.fluid.minecraft.empty.0": "Essential fluid.",
+	"appraisal.fluid.minecraft.empty.1": "The air you breathe.",
+	
+	"appraisal.fluid.minecraft.water.0": "Abundant fluid.",
+	"appraisal.fluid.minecraft.water.1": "71 percent of the Earth's surface.",
+	
+	"appraisal.fluid.minecraft.lava.0": "Hot fluid.",
+	"appraisal.fluid.minecraft.lava.1": "Molten rock from the core of the Earth.",
+	
 	"appraisal.none": "(no appraisal)"
 }

@@ -9,7 +9,9 @@
 		"BlockItemMixin",
 		"BlockMixin",
 		"StairsBlockMixin",
-		"InfestedBlockMixin"
+		"InfestedBlockMixin",
+		"BucketItemMixin",
+		"FluidMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
