@@ -7,7 +7,7 @@ import net.minecraft.util.Pair;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockAppraisalContext implements AppraisalContext{
+public class BlockAppraisalContext extends AbstractApprasialContext{
 
 	protected boolean advanced;
 	protected BlockState state;
@@ -15,16 +15,14 @@ public class BlockAppraisalContext implements AppraisalContext{
 	protected World world;
 	protected BlockPos pos;
 
-	protected Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> base;
-
 	public BlockAppraisalContext(boolean advanced, BlockState state, World world, BlockPos pos,
 		Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> base){
-
+		super(base);
+		
 		this.advanced = advanced;
 		this.state = state;
 		this.world = world;
 		this.pos = pos;
-		this.base = base != null ? base : AppraisalContext.EMPTY_PAIR;
 	}
 
 	public static BlockAppraisalContext of(BlockItemAppraisalManager<?> manager, ItemAppraisalContext context){
@@ -38,31 +36,26 @@ public class BlockAppraisalContext implements AppraisalContext{
 	}
 	
 	public BlockState getState(){
-		return state;
+		return this.state;
 	}
 	
 	public World getWorld(){
-		return world;
+		return this.world;
 	}
 	
 	public BlockPos getPos(){
-		return pos;
-	}
-	
-	@Override
-	public Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> getBase(){
-		return this.base;
+		return this.pos;
 	}
 	
 	public static class Builder{
 		
-		public boolean advanced;
-		public BlockState state;
+		public boolean advanced = false;
+		public BlockState state = null;
 
-		public World world;
-		public BlockPos pos;
+		public World world = null;
+		public BlockPos pos = null;
 
-		public Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> base;
+		public Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> base = AppraisalContext.EMPTY_PAIR;
 		
 		public Builder(){}
 		

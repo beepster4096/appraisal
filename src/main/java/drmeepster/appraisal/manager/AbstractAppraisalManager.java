@@ -3,12 +3,11 @@ package drmeepster.appraisal.manager;
 import java.util.ArrayList;
 import java.util.List;
 
-import drmeepster.appraisal.ApUtil;
 import drmeepster.appraisal.context.AppraisalContext;
+import drmeepster.appraisal.util.ApUtil;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Language;
 import net.minecraft.util.registry.Registry;
 
@@ -26,10 +25,9 @@ public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> im
 	
 	protected final String keyType;
 	
-	protected Style appraisalStyle = new Style().setColor(Formatting.YELLOW);
-	protected Style noAppraisalStyle = new Style().setColor(Formatting.GRAY).setItalic(true);
+	protected Style appraisalStyle = ApUtil.APPRAISAL_STYLE;
 	
-	protected Text noAppraisalText = new TranslatableText("appraisal.none").setStyle(noAppraisalStyle);
+	protected Text noAppraisalText = ApUtil.NO_APPRAISAL_TEXT;
 	
 	protected List<String> keys = null;
 	

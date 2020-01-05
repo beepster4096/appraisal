@@ -19,6 +19,6 @@ public abstract class BlockItemMixin extends Item implements AppraisalItem{
 	
 	@Override
 	public BlockItemAppraisalManager<BlockItem> getAppraisalManager(){
-		return appraisal_appraisalManager;
+		return this.appraisal_appraisalManager;
 	}
 }

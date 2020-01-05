@@ -114,5 +114,7 @@
 	"appraisal.fluid.minecraft.lava.0": "Hot fluid.",
 	"appraisal.fluid.minecraft.lava.1": "Molten rock from the core of the Earth.",
 	
-	"appraisal.none": "(no appraisal)"
+	"appraisal.none": "(no appraisal)",
+	
+	"commands.appraise.none" : "No appraisal found"
 }

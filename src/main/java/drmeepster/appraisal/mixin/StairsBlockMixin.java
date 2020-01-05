@@ -29,6 +29,6 @@ public abstract class StairsBlockMixin extends Block implements AppraisalStairsB
 
 	@Override
 	public StairsBlockAppraisalManager<?> getAppraisalManager(){
-		return appraisal_appraisalManager;
+		return this.appraisal_appraisalManager;
 	}
 }

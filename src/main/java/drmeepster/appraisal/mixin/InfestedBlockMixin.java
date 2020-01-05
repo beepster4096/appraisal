@@ -18,6 +18,6 @@ public abstract class InfestedBlockMixin extends Block implements AppraisalBlock
 	
 	@Override
 	public InfestedBlockAppraisalManager<InfestedBlock> getAppraisalManager(){
-		return appraisal_appraisalManager;
+		return this.appraisal_appraisalManager;
 	}
 }

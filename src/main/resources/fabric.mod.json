@@ -15,6 +15,9 @@
 	"icon": "assets/appraisal/icon.png",
 	"environment": "*",
 	"entrypoints": {
+		"main": [
+			"drmeepster.appraisal.AppraisalMod"
+		]
 	},
 	"mixins": [
 		"appraisal.mixins.json"

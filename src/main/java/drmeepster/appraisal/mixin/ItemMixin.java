@@ -30,7 +30,7 @@ public abstract class ItemMixin implements AppraisalItem{
 	
 	@Override
 	public ItemAppraisalManager<Item> getAppraisalManager(){
-		return appraisal_appraisalManager;
+		return this.appraisal_appraisalManager;
 	}
 }
 

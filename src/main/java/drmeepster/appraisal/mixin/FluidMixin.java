@@ -13,6 +13,6 @@ public abstract class FluidMixin implements AppraisalFluid{
 	
 	@Override
 	public FluidAppraisalManager<Fluid> getAppraisalManager(){
-		return appraisal_appraisalManager;
+		return this.appraisal_appraisalManager;
 	}
 }

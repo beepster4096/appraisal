@@ -24,11 +24,11 @@ public abstract class BucketItemMixin extends Item implements AppraisalBucketIte
 
 	@Override
 	public Fluid getFluid(){
-		return fluid;
+		return this.fluid;
 	}
 
 	@Override
 	public BucketItemAppraisalManager<BucketItem> getAppraisalManager(){
-		return appraisal_appraisalManager;
+		return this.appraisal_appraisalManager;
 	}
 }

@@ -13,6 +13,6 @@ public abstract class BlockMixin implements AppraisalBlock{ //BedrockBlock
 	
 	@Override
 	public BlockAppraisalManager<Block> getAppraisalManager(){
-		return appraisal_appraisalManager;
+		return this.appraisal_appraisalManager;
 	}
 }
