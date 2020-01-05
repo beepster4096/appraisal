@@ -2,6 +2,7 @@ package drmeepster.appraisal.context;
 
 import drmeepster.appraisal.manager.AppraisalManager;
 import drmeepster.appraisal.manager.BucketItemAppraisalManager;
+import drmeepster.appraisal.manager.FluidBlockAppraisalManager;
 import drmeepster.appraisal.quack.AppraisalBucketItem;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.util.Pair;
@@ -29,34 +30,41 @@ public class FluidAppraisalContext implements AppraisalContext{
 	}
 
 	public static FluidAppraisalContext of(BucketItemAppraisalManager<?> manager, ItemAppraisalContext context){
-		return new FluidAppraisalContext(context.isAdvanced(), ((AppraisalBucketItem) manager.getObject()).getFluid().getDefaultState(), null,
-			null, new Pair<>(manager, context));
+		return new FluidAppraisalContext(context.isAdvanced(),
+			((AppraisalBucketItem) manager.getObject()).getFluid().getDefaultState(), null, null,
+			new Pair<>(manager, context));
+	}
+
+	public static FluidAppraisalContext of(FluidBlockAppraisalManager<?> manager, BlockAppraisalContext context){
+		return new FluidAppraisalContext(context.isAdvanced(),
+			((AppraisalBucketItem) manager.getObject()).getFluid().getDefaultState(), context.getWorld(),
+			context.getPos(), new Pair<>(manager, context));
 	}
 
 	@Override
 	public boolean isAdvanced(){
 		return this.advanced;
 	}
-	
+
 	public FluidState getState(){
-		return state;
+		return this.state;
 	}
-	
+
 	public World getWorld(){
-		return world;
+		return this.world;
 	}
-	
+
 	public BlockPos getPos(){
-		return pos;
+		return this.pos;
 	}
-	
+
 	@Override
 	public Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> getBase(){
 		return this.base;
 	}
-	
+
 	public static class Builder{
-		
+
 		public boolean advanced;
 		public FluidState state;
 
@@ -64,9 +72,9 @@ public class FluidAppraisalContext implements AppraisalContext{
 		public BlockPos pos;
 
 		public Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> base;
-		
+
 		public Builder(){}
-		
+
 		public Builder(FluidAppraisalContext context){
 			this.advanced = context.advanced;
 			this.state = context.state;
@@ -74,44 +82,44 @@ public class FluidAppraisalContext implements AppraisalContext{
 			this.pos = context.pos;
 			this.base = context.base;
 		}
-		
+
 		public FluidAppraisalContext build(){
 			return new FluidAppraisalContext(this.advanced, this.state, this.world, this.pos, this.base);
 		}
-		
+
 		public Builder setAdvanced(boolean advanced){
 			this.advanced = advanced;
-			
+
 			return this;
 		}
-		
+
 		public Builder setAdvanced(){
 			this.setAdvanced(true);
-			
+
 			return this;
 		}
-		
+
 		public Builder setState(FluidState state){
 			this.state = state;
-			
+
 			return this;
 		}
-		
+
 		public Builder setWorld(World world){
 			this.world = world;
-			
+
 			return this;
 		}
-		
+
 		public Builder setPos(BlockPos pos){
 			this.pos = pos;
-			
+
 			return this;
 		}
-		
+
 		public Builder setBase(Pair<? extends AppraisalManager<?, ?>, ? extends AppraisalContext> base){
 			this.base = base;
-			
+
 			return this;
 		}
 	}

@@ -6,5 +6,5 @@ import drmeepster.appraisal.manager.BlockAppraisalManager;
 public interface AppraisalBlock extends Appraisable{
 	
 	@Override
-	public BlockAppraisalManager<?> getAppraisalManager();
+	public BlockAppraisalManager<?> getAppraisalManager(); //FluidBlock
 }

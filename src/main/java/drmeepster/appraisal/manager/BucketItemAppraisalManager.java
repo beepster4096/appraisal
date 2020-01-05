@@ -16,8 +16,14 @@ public class BucketItemAppraisalManager<T extends BucketItem> extends ItemApprai
 	}
 
 	@Override
-	public List<Text> getAppraisal(ItemAppraisalContext context){
-		return ((AppraisalFluid) ((AppraisalBucketItem) this.getObject()).getFluid()).getAppraisalManager()
-			.getAppraisal(FluidAppraisalContext.of(this, context));
+	public List<Text> getRawAppraisal(ItemAppraisalContext context){
+		List<Text> out = super.getRawAppraisal(context);
+		
+		if(out.size() == 0){
+			out = ((AppraisalFluid) ((AppraisalBucketItem) this.getObject()).getFluid()).getAppraisalManager()
+				.getRawAppraisal(FluidAppraisalContext.of(this, context));
+		}
+		
+		return out;
 	}
 }

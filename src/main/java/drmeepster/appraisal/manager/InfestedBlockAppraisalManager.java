@@ -4,23 +4,24 @@ import java.util.List;
 
 import drmeepster.appraisal.context.BlockAppraisalContext;
 import drmeepster.appraisal.quack.AppraisalBlock;
-import net.minecraft.block.Block;
 import net.minecraft.block.InfestedBlock;
+import net.minecraft.text.Text;
 
 public class InfestedBlockAppraisalManager<T extends InfestedBlock> extends BlockAppraisalManager<T>{
 
 	public InfestedBlockAppraisalManager(T block){
 		super(block);
 	}
-
+	
 	@Override
-	public List<String> getTranslationKeys(BlockAppraisalContext context){
-		List<String> out = super.getTranslationKeys(context);
+	public List<Text> getRawAppraisal(BlockAppraisalContext context){
+		List<Text> out = super.getRawAppraisal(context);
 
-		Block base = this.getObject().getRegularBlock();
+		if(out.size() == 0){
+			out = ((AppraisalBlock) this.getObject().getRegularBlock()).getAppraisalManager()
+				.getRawAppraisal(context);
+		}
 
-		out.addAll(((AppraisalBlock) base).getAppraisalManager()
-			.getTranslationKeys(new BlockAppraisalContext.Builder(context).setState(base.getDefaultState()).build()));
 		return out;
 	}
 }

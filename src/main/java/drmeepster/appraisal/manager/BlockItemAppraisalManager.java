@@ -15,8 +15,14 @@ public class BlockItemAppraisalManager<T extends BlockItem> extends ItemAppraisa
 	}
 
 	@Override
-	public List<Text> getAppraisal(ItemAppraisalContext context){
-		return ((AppraisalBlock) this.getObject().getBlock()).getAppraisalManager()
-			.getAppraisal(BlockAppraisalContext.of(this, context));
+	public List<Text> getRawAppraisal(ItemAppraisalContext context){
+		List<Text> out = super.getRawAppraisal(context);
+
+		if(out.size() == 0){
+			out = ((AppraisalBlock) this.getObject().getBlock()).getAppraisalManager()
+				.getRawAppraisal(BlockAppraisalContext.of(this, context));
+		}
+
+		return out;
 	}
 }

@@ -5,8 +5,8 @@ import java.util.List;
 import drmeepster.appraisal.context.BlockAppraisalContext;
 import drmeepster.appraisal.quack.AppraisalBlock;
 import drmeepster.appraisal.quack.AppraisalStairsBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.text.Text;
 
 public class StairsBlockAppraisalManager<T extends StairsBlock> extends BlockAppraisalManager<T>{
 
@@ -15,13 +15,14 @@ public class StairsBlockAppraisalManager<T extends StairsBlock> extends BlockApp
 	}
 
 	@Override
-	public List<String> getTranslationKeys(BlockAppraisalContext context){
-		List<String> out = super.getTranslationKeys(context);
+	public List<Text> getRawAppraisal(BlockAppraisalContext context){
+		List<Text> out = super.getRawAppraisal(context);
 
-		BlockState state = ((AppraisalStairsBlock) this.getObject()).getBaseBlockState();
+		if(out.size() == 0){
+			out = ((AppraisalBlock) ((AppraisalStairsBlock) this.getObject()).getBaseBlockState().getBlock()).getAppraisalManager()
+				.getRawAppraisal(context);
+		}
 
-		out.addAll(((AppraisalBlock) state.getBlock()).getAppraisalManager()
-			.getTranslationKeys(new BlockAppraisalContext.Builder(context).setState(state).build()));
 		return out;
 	}
 }

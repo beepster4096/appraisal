@@ -43,6 +43,17 @@ public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> im
 	
 	@Override
 	public List<Text> getAppraisal(C context){
+		List<Text> out = this.getRawAppraisal(context);
+		
+		if(out.size() == 0 && context.isAdvanced()){
+			out.add(this.noAppraisalText);
+		}
+
+		return out;
+	}
+	
+	//getAppraisal may return nonempty list even if no appraisal found
+	public List<Text> getRawAppraisal(C context){
 		List<Text> out = new ArrayList<>();
 		
 		List<String> keys = this.getTranslationKeys(context);
@@ -57,10 +68,6 @@ public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> im
 			if(i > 0){
 				break;
 			}
-		}
-		
-		if(out.size() == 0 && context.isAdvanced()){
-			out.add(this.noAppraisalText);
 		}
 
 		return out;
