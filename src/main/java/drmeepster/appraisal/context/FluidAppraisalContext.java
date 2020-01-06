@@ -3,6 +3,7 @@ package drmeepster.appraisal.context;
 import drmeepster.appraisal.manager.AppraisalManager;
 import drmeepster.appraisal.manager.block.FluidBlockAppraisalManager;
 import drmeepster.appraisal.manager.item.BucketItemAppraisalManager;
+import drmeepster.appraisal.quack.block.AppraisalFluidBlock;
 import drmeepster.appraisal.quack.item.AppraisalBucketItem;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.util.Pair;
@@ -37,7 +38,7 @@ public class FluidAppraisalContext implements AppraisalContext{
 
 	public static FluidAppraisalContext of(FluidBlockAppraisalManager<?> manager, BlockAppraisalContext context){
 		return new FluidAppraisalContext(context.isAdvanced(),
-			((AppraisalBucketItem) manager.getObject()).getFluid().getDefaultState(), context.getWorld(),
+			((AppraisalFluidBlock) manager.getObject()).getFluid().getDefaultState(), context.getWorld(),
 			context.getPos(), new Pair<>(manager, context));
 	}
 
