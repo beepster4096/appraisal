@@ -1,4 +1,4 @@
-package drmeepster.appraisal.mixin.item;
+package drmeepster.appraisal.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

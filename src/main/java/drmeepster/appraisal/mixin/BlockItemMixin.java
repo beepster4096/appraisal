@@ -1,5 +1,5 @@
 
-package drmeepster.appraisal.mixin.item;
+package drmeepster.appraisal.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 

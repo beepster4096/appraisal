@@ -1,4 +1,4 @@
-package drmeepster.appraisal.mixin.item;
+package drmeepster.appraisal.mixin;
 
 import java.util.List;
 

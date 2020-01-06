@@ -1,4 +1,4 @@
-package drmeepster.appraisal.mixin.block;
+package drmeepster.appraisal.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 
