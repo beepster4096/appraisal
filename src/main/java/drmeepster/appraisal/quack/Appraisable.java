@@ -1,4 +1,4 @@
-package drmeepster.appraisal;
+package drmeepster.appraisal.quack;
 
 import drmeepster.appraisal.manager.AppraisalManager;
 
