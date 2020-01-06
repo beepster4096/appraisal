@@ -1,9 +1,9 @@
 package drmeepster.appraisal.context;
 
 import drmeepster.appraisal.manager.AppraisalManager;
-import drmeepster.appraisal.manager.BucketItemAppraisalManager;
-import drmeepster.appraisal.manager.FluidBlockAppraisalManager;
-import drmeepster.appraisal.quack.AppraisalBucketItem;
+import drmeepster.appraisal.manager.block.FluidBlockAppraisalManager;
+import drmeepster.appraisal.manager.item.BucketItemAppraisalManager;
+import drmeepster.appraisal.quack.item.AppraisalBucketItem;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.util.Pair;
 import net.minecraft.util.math.BlockPos;

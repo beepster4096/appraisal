@@ -14,8 +14,8 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
 import drmeepster.appraisal.context.BlockAppraisalContext;
 import drmeepster.appraisal.context.ItemAppraisalContext;
-import drmeepster.appraisal.quack.AppraisalBlock;
-import drmeepster.appraisal.quack.AppraisalItem;
+import drmeepster.appraisal.quack.block.AppraisalBlock;
+import drmeepster.appraisal.quack.item.AppraisalItem;
 import drmeepster.appraisal.util.ApUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.command.arguments.BlockStateArgumentType;

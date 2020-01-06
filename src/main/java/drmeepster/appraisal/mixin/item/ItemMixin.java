@@ -1,4 +1,4 @@
-package drmeepster.appraisal.mixin;
+package drmeepster.appraisal.mixin.item;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import drmeepster.appraisal.context.ItemAppraisalContext;
-import drmeepster.appraisal.manager.ItemAppraisalManager;
-import drmeepster.appraisal.quack.AppraisalItem;
+import drmeepster.appraisal.manager.item.ItemAppraisalManager;
+import drmeepster.appraisal.quack.item.AppraisalItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

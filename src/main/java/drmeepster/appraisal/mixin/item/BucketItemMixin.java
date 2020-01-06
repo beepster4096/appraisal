@@ -1,10 +1,10 @@
-package drmeepster.appraisal.mixin;
+package drmeepster.appraisal.mixin.item;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
-import drmeepster.appraisal.manager.BucketItemAppraisalManager;
-import drmeepster.appraisal.quack.AppraisalBucketItem;
+import drmeepster.appraisal.manager.item.BucketItemAppraisalManager;
+import drmeepster.appraisal.quack.item.AppraisalBucketItem;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;

@@ -1,9 +1,9 @@
-package drmeepster.appraisal.mixin;
+package drmeepster.appraisal.mixin.block;
 
 import org.spongepowered.asm.mixin.Mixin;
 
-import drmeepster.appraisal.manager.BlockAppraisalManager;
-import drmeepster.appraisal.quack.AppraisalBlock;
+import drmeepster.appraisal.manager.block.BlockAppraisalManager;
+import drmeepster.appraisal.quack.block.AppraisalBlock;
 import net.minecraft.block.Block;
 
 @Mixin(Block.class)

@@ -1,7 +1,7 @@
-package drmeepster.appraisal.quack;
+package drmeepster.appraisal.quack.block;
 
 import drmeepster.appraisal.Appraisable;
-import drmeepster.appraisal.manager.BlockAppraisalManager;
+import drmeepster.appraisal.manager.block.BlockAppraisalManager;
 
 public interface AppraisalBlock extends Appraisable{
 	

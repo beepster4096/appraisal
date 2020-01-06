@@ -1,7 +1,7 @@
 package drmeepster.appraisal.context;
 
 import drmeepster.appraisal.manager.AppraisalManager;
-import drmeepster.appraisal.manager.BlockItemAppraisalManager;
+import drmeepster.appraisal.manager.item.BlockItemAppraisalManager;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Pair;
 import net.minecraft.util.math.BlockPos;

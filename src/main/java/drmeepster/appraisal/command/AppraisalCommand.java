@@ -8,7 +8,6 @@ import com.google.common.collect.Lists;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.mojang.brigadier.tree.CommandNode;
 
 import drmeepster.appraisal.command.AppraisalSubCommands.Entry;
 import net.minecraft.server.command.ServerCommandSource;

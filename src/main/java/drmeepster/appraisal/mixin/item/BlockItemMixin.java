@@ -1,10 +1,10 @@
 
-package drmeepster.appraisal.mixin;
+package drmeepster.appraisal.mixin.item;
 
 import org.spongepowered.asm.mixin.Mixin;
 
-import drmeepster.appraisal.manager.BlockItemAppraisalManager;
-import drmeepster.appraisal.quack.AppraisalItem;
+import drmeepster.appraisal.manager.item.BlockItemAppraisalManager;
+import drmeepster.appraisal.quack.item.AppraisalItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 

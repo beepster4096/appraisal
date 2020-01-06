@@ -1,11 +1,11 @@
-package drmeepster.appraisal.manager;
+package drmeepster.appraisal.manager.item;
 
 import java.util.List;
 
 import drmeepster.appraisal.context.FluidAppraisalContext;
 import drmeepster.appraisal.context.ItemAppraisalContext;
-import drmeepster.appraisal.quack.AppraisalBucketItem;
 import drmeepster.appraisal.quack.AppraisalFluid;
+import drmeepster.appraisal.quack.item.AppraisalBucketItem;
 import net.minecraft.item.BucketItem;
 import net.minecraft.text.Text;
 

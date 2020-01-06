@@ -1,13 +1,9 @@
 package drmeepster.appraisal.context;
 
-import drmeepster.appraisal.context.BlockAppraisalContext.Builder;
 import drmeepster.appraisal.manager.AppraisalManager;
-import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Pair;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class ItemAppraisalContext extends AbstractApprasialContext{
 

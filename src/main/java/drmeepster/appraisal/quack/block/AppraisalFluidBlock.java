@@ -1,4 +1,4 @@
-package drmeepster.appraisal.quack;
+package drmeepster.appraisal.quack.block;
 
 import net.minecraft.fluid.Fluid;
 

@@ -1,9 +1,9 @@
-package drmeepster.appraisal.manager;
+package drmeepster.appraisal.manager.block;
 
 import java.util.List;
 
 import drmeepster.appraisal.context.BlockAppraisalContext;
-import drmeepster.appraisal.quack.AppraisalBlock;
+import drmeepster.appraisal.quack.block.AppraisalBlock;
 import net.minecraft.block.InfestedBlock;
 import net.minecraft.text.Text;
 

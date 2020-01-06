@@ -1,6 +1,7 @@
-package drmeepster.appraisal.manager;
+package drmeepster.appraisal.manager.block;
 
 import drmeepster.appraisal.context.BlockAppraisalContext;
+import drmeepster.appraisal.manager.AbstractAppraisalManager;
 import net.minecraft.block.Block;
 import net.minecraft.util.registry.Registry;
 

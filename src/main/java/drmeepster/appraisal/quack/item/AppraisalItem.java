@@ -1,7 +1,7 @@
-package drmeepster.appraisal.quack;
+package drmeepster.appraisal.quack.item;
 
 import drmeepster.appraisal.Appraisable;
-import drmeepster.appraisal.manager.ItemAppraisalManager;
+import drmeepster.appraisal.manager.item.ItemAppraisalManager;
 
 public interface AppraisalItem extends Appraisable{
 

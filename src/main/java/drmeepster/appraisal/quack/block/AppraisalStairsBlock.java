@@ -1,6 +1,6 @@
-package drmeepster.appraisal.quack;
+package drmeepster.appraisal.quack.block;
 
-import drmeepster.appraisal.manager.StairsBlockAppraisalManager;
+import drmeepster.appraisal.manager.block.StairsBlockAppraisalManager;
 import net.minecraft.block.BlockState;
 
 public interface AppraisalStairsBlock extends AppraisalBlock{
