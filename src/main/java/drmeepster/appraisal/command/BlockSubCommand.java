@@ -3,10 +3,9 @@ package drmeepster.appraisal.command;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.mojang.brigadier.builder.ArgumentBuilder;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 
 import drmeepster.appraisal.context.BlockAppraisalContext;
@@ -32,20 +31,16 @@ public class BlockSubCommand extends AbstractSubCommand{
 			new BlockAppraisalContext.Builder().setState(state).build()
 		);
 		
-		return SubCommand.appraise(ctx, texts);
+		return AppraisalCommand.appraise(ctx, texts);
 	}
 
 	@Override
-	protected List<ArgumentBuilder<ServerCommandSource, ?>> generateBranches(){
-		ArrayList<ArgumentBuilder<ServerCommandSource, ?>> out = new ArrayList<>(1);
-		
-		out.add(literal("abstract")
+	protected void generateBranches(LiteralArgumentBuilder<ServerCommandSource> root){
+		root.then(literal("abstract")
 			.then(argument("blockstate", BlockStateArgumentType.blockState())
 				.executes(ctx -> executeBlockAbstract(ctx))
 			)
 		);
-		
-		return out;
 	}
 
 }

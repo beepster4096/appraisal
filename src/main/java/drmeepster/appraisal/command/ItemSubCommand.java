@@ -3,11 +3,10 @@ package drmeepster.appraisal.command;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.mojang.brigadier.arguments.IntegerArgumentType;
-import com.mojang.brigadier.builder.ArgumentBuilder;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
@@ -36,14 +35,12 @@ public class ItemSubCommand extends AbstractSubCommand{
 			new ItemAppraisalContext.Builder().setStack(stack).build()
 		);
 		
-		return SubCommand.appraise(ctx, texts);
+		return AppraisalCommand.appraise(ctx, texts);
 	}
 
 	@Override
-	protected List<ArgumentBuilder<ServerCommandSource, ?>> generateBranches(){
-		ArrayList<ArgumentBuilder<ServerCommandSource, ?>> out = new ArrayList<>(1);
-		
-		out.add(literal("abstract")
+	protected void generateBranches(LiteralArgumentBuilder<ServerCommandSource> root){
+		root.then(literal("abstract")
 			.then(argument("item", ItemStackArgumentType.itemStack())
 				.executes(ctx -> executeItemAbstract(ctx, 1))
 				.then(argument("count", IntegerArgumentType.integer())
@@ -53,8 +50,6 @@ public class ItemSubCommand extends AbstractSubCommand{
 				)
 			)
 		);
-		
-		return out;
 	}
 
 }

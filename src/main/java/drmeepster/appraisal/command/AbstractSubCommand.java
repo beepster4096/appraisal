@@ -1,8 +1,5 @@
 package drmeepster.appraisal.command;
 
-import java.util.List;
-
-import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 
 import net.minecraft.server.command.CommandManager;
@@ -17,16 +14,13 @@ public abstract class AbstractSubCommand implements SubCommand{
 		this.id = id;
 	}
 	
-	protected abstract List<ArgumentBuilder<ServerCommandSource, ?>> generateBranches();
+	protected abstract void generateBranches(LiteralArgumentBuilder<ServerCommandSource> root);
 	
 	@Override
 	public LiteralArgumentBuilder<ServerCommandSource> getCommand(){
-		List<ArgumentBuilder<ServerCommandSource, ?>> branches = this.generateBranches();
 		LiteralArgumentBuilder<ServerCommandSource> root = CommandManager.literal(this.getIdString());
 		
-		for(ArgumentBuilder<ServerCommandSource, ?> branch : branches){
-			root.then(branch);
-		}
+		this.generateBranches(root);
 
 		return root;
 	}
