@@ -1,10 +1,12 @@
 package drmeepster.appraisal.command;
 
+import static com.mojang.brigadier.arguments.BoolArgumentType.bool;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
 import java.util.List;
 
+import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 
@@ -24,11 +26,11 @@ public class BlockSubCommand extends AbstractSubCommand{
 		super(ID);
 	}
 	
-	private static int executeBlockAbstract(CommandContext<ServerCommandSource> ctx){
+	private static int executeBlockAbstract(CommandContext<ServerCommandSource> ctx, boolean advanced){
 		BlockState state = BlockStateArgumentType.getBlockState(ctx, "blockstate").getBlockState();
 		
 		List<Text> texts = ((AppraisalBlock) state.getBlock()).getAppraisalManager().getAppraisal(
-			new BlockAppraisalContext.Builder().setState(state).build()
+			new BlockAppraisalContext.Builder().setState(state).setAdvanced(advanced).build()
 		);
 		
 		return AppraisalCommand.appraise(ctx, texts);
@@ -38,7 +40,10 @@ public class BlockSubCommand extends AbstractSubCommand{
 	protected void generateBranches(LiteralArgumentBuilder<ServerCommandSource> root){
 		root.then(literal("abstract")
 			.then(argument("blockstate", BlockStateArgumentType.blockState())
-				.executes(ctx -> executeBlockAbstract(ctx))
+				.executes(ctx -> executeBlockAbstract(ctx, false))
+				.then(argument("advanced", bool())
+					.executes(ctx -> executeBlockAbstract(ctx, BoolArgumentType.getBool(ctx, "advanced")))
+				)
 			)
 		);
 	}
