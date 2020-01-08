@@ -111,8 +111,14 @@
 	"appraisal.fluid.minecraft.water.0": "Abundant fluid.",
 	"appraisal.fluid.minecraft.water.1": "71 percent of the Earth's surface.",
 	
+	"appraisal.fluid.minecraft.flowing_water.0": "Abundant fluid.",
+	"appraisal.fluid.minecraft.flowing_water.1": "Flowing quickly.",
+	
 	"appraisal.fluid.minecraft.lava.0": "Hot fluid.",
 	"appraisal.fluid.minecraft.lava.1": "Molten rock from the core of the Earth.",
+	
+	"appraisal.fluid.minecraft.moving_lava.0": "Hot fluid.",
+	"appraisal.fluid.minecraft.moving_lava.1": "Flowing slowly.",
 	
 	"appraisal.none": "(no appraisal)",
 	
