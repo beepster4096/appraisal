@@ -7,6 +7,9 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
 
+/**
+ * Utility variables and classes.
+ */
 public class ApUtil{
 
 	public static final String TRANSLATION_ITEM_TYPE = "appraisal.item";
@@ -26,7 +29,7 @@ public class ApUtil{
 	 * @param registry A <code>Registry</code> containing <code>obj</code>
 	 * @return A translation key for <code>obj</code>
 	 */
-	public static <T> String getKey(String type, T obj, Registry<T> registry){ // Registry
+	public static <T> String getKey(String type, T obj, Registry<T> registry){
 		return Util.createTranslationKey(type, registry.getId(obj)) + ".";
 	}
 }
