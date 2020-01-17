@@ -8,6 +8,11 @@ import drmeepster.appraisal.quack.block.AppraisalBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.text.Text;
 
+/**
+ * The <code>AppraisalManager</code> for <code>BlockItem</code>.
+ *
+ * @param <T> class of the owning object
+ */
 public class BlockItemAppraisalManager<T extends BlockItem> extends ItemAppraisalManager<T>{
 
 	public BlockItemAppraisalManager(T item){

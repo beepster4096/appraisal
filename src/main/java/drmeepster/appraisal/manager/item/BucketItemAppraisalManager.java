@@ -9,6 +9,11 @@ import drmeepster.appraisal.quack.item.AppraisalBucketItem;
 import net.minecraft.item.BucketItem;
 import net.minecraft.text.Text;
 
+/**
+ * The <code>AppraisalManager</code> for <code>BucketItem</code>.
+ *
+ * @param <T> class of the owning object
+ */
 public class BucketItemAppraisalManager<T extends BucketItem> extends ItemAppraisalManager<T>{
 
 	public BucketItemAppraisalManager(T item){

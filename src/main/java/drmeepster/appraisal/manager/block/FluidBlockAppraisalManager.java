@@ -9,6 +9,11 @@ import drmeepster.appraisal.quack.block.AppraisalFluidBlock;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.text.Text;
 
+/**
+ * The <code>AppraisalManager</code> for <code>FluidBlock</code>.
+ *
+ * @param <T> class of the owning object
+ */
 public class FluidBlockAppraisalManager<T extends FluidBlock> extends BlockAppraisalManager<T>{
 
 	public FluidBlockAppraisalManager(T block){

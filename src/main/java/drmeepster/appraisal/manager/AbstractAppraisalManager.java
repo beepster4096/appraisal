@@ -11,8 +11,21 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Language;
 import net.minecraft.util.registry.Registry;
 
+/**
+ * Implementation of <code>AppraisalManager</code>.
+ *
+ * @param <T> class of the owning object
+ * @param <C> <code>AppraisalContext</code> type needed for appraisal
+ */
 public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> implements AppraisalManager<T, C>{
 	
+	/**
+	 * Construct an <code>AbstractAppraisalManager</code>
+	 * 
+	 * @param obj the owning object
+	 * @param registry a <code>Registry</code> containing <code>obj</code>
+	 * @param keyType a prefix for the appraisal translation key
+	 */
 	public AbstractAppraisalManager(T obj, Registry<? super T> registry, String keyType){
 		this.object = obj;
 		this.registry = registry;
@@ -37,11 +50,6 @@ public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> im
 	}
 	
 	@Override
-	public Registry<? super T> getRegistry(){
-		return this.registry;
-	}
-	
-	@Override
 	public List<Text> getAppraisal(C context){
 		List<Text> out = this.getRawAppraisal(context);
 		
@@ -52,7 +60,13 @@ public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> im
 		return out;
 	}
 	
-	//getAppraisal may return nonempty list even if no appraisal found
+	/**
+	 * Returns the appraisal. This method, unlike {@link #getAppraisal(AppraisalContext)}
+	 * will always return an empty <code>List</code> if there is no defined appraisal in the translation files.
+	 * 
+	 * @param context
+	 * @return
+	 */
 	public List<Text> getRawAppraisal(C context){
 		List<Text> out = new ArrayList<>();
 		
@@ -73,7 +87,17 @@ public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> im
 		return out;
 	}
 	
-	@Override
+	/**
+	 * @return a <code>Registry</code> containing the owning registry
+	 */
+	public Registry<? super T> getRegistry(){
+		return this.registry;
+	}
+	
+	/**
+	 * @param context
+	 * @return the translation keys for this appraisal in priority order
+	 */
 	public List<String> getTranslationKeys(C context){
 		if(this.keys == null){
 			this.keys = this.generateKeys();
@@ -82,7 +106,12 @@ public abstract class AbstractAppraisalManager<T, C extends AppraisalContext> im
 		return new ArrayList<>(this.keys);
 	}
 	
-	public List<String> generateKeys(){
+	/**
+	 * Generates new translation keys
+	 * 
+	 * @return the translation keys
+	 */
+	protected List<String> generateKeys(){
 		ArrayList<String> out = new ArrayList<>(1);
 		out.add(ApUtil.getKey(this.keyType, this.getObject(), this.getRegistry()));
 		

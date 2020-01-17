@@ -8,6 +8,11 @@ import drmeepster.appraisal.quack.block.AppraisalStairsBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.text.Text;
 
+/**
+ * The <code>AppraisalManager</code> for <code>StairsBlock</code>.
+ *
+ * @param <T> class of the owning object
+ */
 public class StairsBlockAppraisalManager<T extends StairsBlock> extends BlockAppraisalManager<T>{
 
 	public StairsBlockAppraisalManager(T block){

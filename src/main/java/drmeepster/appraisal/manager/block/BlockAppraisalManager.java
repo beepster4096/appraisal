@@ -5,6 +5,11 @@ import drmeepster.appraisal.manager.AbstractAppraisalManager;
 import net.minecraft.block.Block;
 import net.minecraft.util.registry.Registry;
 
+/**
+ * The <code>AppraisalManager</code> for <code>Block</code>.
+ *
+ * @param <T> class of the owning object
+ */
 public class BlockAppraisalManager<T extends Block>
 	extends AbstractAppraisalManager<T, BlockAppraisalContext>{
 

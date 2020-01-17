@@ -7,6 +7,11 @@ import drmeepster.appraisal.quack.block.AppraisalBlock;
 import net.minecraft.block.InfestedBlock;
 import net.minecraft.text.Text;
 
+/**
+ * The <code>AppraisalManager</code> for <code>InfestedBlock</code>.
+ *
+ * @param <T> class of the owning object
+ */
 public class InfestedBlockAppraisalManager<T extends InfestedBlock> extends BlockAppraisalManager<T>{
 
 	public InfestedBlockAppraisalManager(T block){
