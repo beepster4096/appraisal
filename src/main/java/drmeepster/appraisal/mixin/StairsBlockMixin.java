@@ -9,6 +9,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;
 
+/**
+ * Mixin for <code>StairsBlock</code>.
+ */
 @Mixin(StairsBlock.class)
 public abstract class StairsBlockMixin extends Block implements AppraisalStairsBlock{
 

@@ -7,6 +7,9 @@ import drmeepster.appraisal.quack.block.AppraisalBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.InfestedBlock;
 
+/**
+ * Mixin for <code>InfestedBlock</code>.
+ */
 @Mixin(InfestedBlock.class)
 public abstract class InfestedBlockMixin extends Block implements AppraisalBlock{
 

@@ -8,6 +8,9 @@ import drmeepster.appraisal.quack.item.AppraisalItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
+/**
+ * Mixin for <code>BlockItem</code>.
+ */
 @Mixin(BlockItem.class)
 public abstract class BlockItemMixin extends Item implements AppraisalItem{
 	

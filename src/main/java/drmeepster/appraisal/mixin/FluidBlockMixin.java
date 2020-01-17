@@ -10,6 +10,9 @@ import net.minecraft.block.FluidBlock;
 import net.minecraft.fluid.BaseFluid;
 import net.minecraft.fluid.Fluid;
 
+/**
+ * Mixin for <code>FluidBlock</code>.
+ */
 @Mixin(FluidBlock.class)
 public abstract class FluidBlockMixin extends Block implements AppraisalFluidBlock{
 

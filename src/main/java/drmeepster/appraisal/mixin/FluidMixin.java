@@ -6,6 +6,9 @@ import drmeepster.appraisal.manager.FluidAppraisalManager;
 import drmeepster.appraisal.quack.AppraisalFluid;
 import net.minecraft.fluid.Fluid;
 
+/**
+ * Mixin for <code>Fluid</code>.
+ */
 @Mixin(Fluid.class)
 public abstract class FluidMixin implements AppraisalFluid{
 	

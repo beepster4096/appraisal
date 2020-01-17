@@ -9,6 +9,9 @@ import net.minecraft.fluid.Fluid;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 
+/**
+ * Mixin for <code>BucketItem</code>.
+ */
 @Mixin(BucketItem.class)
 public abstract class BucketItemMixin extends Item implements AppraisalBucketItem{
 

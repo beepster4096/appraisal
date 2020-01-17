@@ -16,6 +16,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
+/**
+ * Mixin for <code>Item</code>.
+ */
 @Mixin(Item.class)
 public abstract class ItemMixin implements AppraisalItem{
 
